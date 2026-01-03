@@ -1,184 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - Qibla Finder</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #0F1423; /* Deep Navy Blue */
-            --accent-color: #D4AF37; /* Metallic Gold */
-            --text-color: #333333;
-            --bg-color: #FAFAFA;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: #ffffff;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            min-height: 100vh;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--accent-color);
-        }
-
-        h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        .last-updated {
-            color: #666;
-            font-size: 0.9em;
-            font-style: italic;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            margin-top: 30px;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 10px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            border-bottom: 1px dotted var(--accent-color);
-        }
-
-        a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer {
-            margin-top: 50px;
-            text-align: center;
-            font-size: 0.85em;
-            color: #888;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Terms of Use (EULA)</h1>
-            <p><strong>Qibla Finder</strong> by RMDN STUDIOS</p>
-            <p class="last-updated">Last updated: December 29, 2025</p>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200 mb-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="../index.html" class="flex items-center gap-2">
+                    <img src="../assets/logo/transparent_logo_for white_background.png.png" alt="RMDN Studios Logo"
+                        class="h-10 w-auto">
+                </a>
+                <div class="flex items-center gap-6 text-sm font-medium text-slate-600">
+                    <a href="../index.html" class="hover:text-blue-600 transition-colors">Home</a>
+                    <a href="mailto:support@rmdnstudios.com" class="hover:text-blue-600 transition-colors">Support</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto px-6 py-12 bg-white min-h-screen shadow-sm">
+
+        <!-- Header -->
+        <header class="border-b border-slate-100 pb-8 mb-8 text-center">
+            <h1 class="text-3xl font-extrabold text-slate-900 mb-2">Terms of Use</h1>
+            <p class="text-slate-500 mb-4">Qibla Finder Application</p>
+            <p class="text-sm text-slate-400">Last updated: January 3, 2026</p>
         </header>
 
-        <section>
-            <p>This End User License Agreement ("EULA" or "Terms") is a legal agreement between you and <strong>RMDN STUDIOS</strong> ("we", "us", or "our") governing your use of the <strong>Qibla Finder</strong> mobile application (the "App"). By downloading, installing, or using the App, you agree to be bound by these Terms.</p>
-        </section>
+        <!-- Content -->
+        <div class="prose prose-slate max-w-none">
+            <p>By downloading, installing, or using <strong>Qibla Finder</strong> (the "App"), you agree to the
+                following terms (EULA).</p>
 
-        <section>
-            <h2>1. License Grant</h2>
-            <p>We grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App on a device that you own or control, solely for your personal, non-commercial purposes in accordance with these Terms.</p>
-            <p>You may not:</p>
-            <ul>
-                <li>Copy, modify, or distribute the App</li>
-                <li>Reverse engineer, decompile, or disassemble the App</li>
-                <li>Rent, lease, lend, sell, or sublicense the App</li>
-                <li>Use the App for any unlawful purpose</li>
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">1. License Grant</h2>
+            <p>RMDN STUDIOS grants you a limited, non-exclusive license to use the App for personal, non-commercial
+                purposes. You may not modify, reverse engineer, or redistribute the App.</p>
+
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">2. Premium Subscriptions</h2>
+            <p>The App offers optional premium features via auto-renewable subscriptions:</p>
+            <ul class="list-disc pl-5 space-y-2 mb-4">
+                <li><strong>Features:</strong> Ad-free experience, AR Qibla, and exclusive themes.</li>
+                <li><strong>Billing:</strong> Charged to your Apple ID or Play Store account upon confirmation.</li>
+                <li><strong>Renewal:</strong> Auto-renews unless canceled at least 24 hours before the period ends.</li>
+                <li><strong>Management:</strong> Manage or cancel via device Account Settings.</li>
             </ul>
-        </section>
 
-        <section>
-            <h2>2. Subscription Terms</h2>
-            <p>Qibla Finder offers optional premium features through auto-renewable subscriptions:</p>
-            <ul>
-                <li><strong>Monthly Subscription:</strong> Billed on a monthly basis</li>
-                <li><strong>Yearly Subscription:</strong> Billed on an annual basis</li>
-            </ul>
-            <p><strong>Payment:</strong> Payment will be charged to your Apple ID account at confirmation of purchase.</p>
-            <p><strong>Auto-Renewal:</strong> Your subscription automatically renews unless you cancel it at least 24 hours before the end of the current billing period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the same rate.</p>
-            <p><strong>Managing Subscriptions:</strong> You can manage and cancel your subscriptions by going to your account settings in the App Store after purchase. Cancellation will take effect at the end of the current billing period.</p>
-        </section>
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">3. Disclaimer</h2>
+            <p><strong>Accuracy:</strong> While we strive for high precision using GPS and sensors, the Qibla direction
+                and prayer times are for reference only. We recommend verification with local mosques if you are
+                uncertain.</p>
+            <p>The App is provided "AS IS" without warranties of any kind regarding reliability or availability.</p>
 
-        <section>
-            <h2>3. Premium Features</h2>
-            <p>Premium subscribers receive access to:</p>
-            <ul>
-                <li><strong>Ad-Free Experience:</strong> Enjoy the App without any advertisements</li>
-                <li><strong>AR Qibla Direction:</strong> High-precision augmented reality overlay for finding the Qibla direction</li>
-                <li><strong>Exclusive Themes:</strong> Access to premium geometric designs and visual themes</li>
-            </ul>
-        </section>
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">4. Limitation of Liability</h2>
+            <p>RMDN STUDIOS shall not be liable for any indirect damages arising from your use of the App.</p>
 
-        <section>
-            <h2>4. Free Trial</h2>
-            <p>If offered, any free trial period will be forfeited when you purchase a subscription before the trial ends. Free trial eligibility is determined by Apple and may vary.</p>
-        </section>
-
-        <section>
-            <h2>5. Refunds</h2>
-            <p>All purchases and subscriptions are processed by Apple through the App Store. Refund requests must be directed to Apple Support. We do not have the ability to process refunds directly.</p>
-        </section>
-
-        <section>
-            <h2>6. Disclaimer of Warranty</h2>
-            <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. We do not warrant that the App will be uninterrupted, error-free, or completely secure.</p>
-            <p><strong>Qibla Direction Accuracy:</strong> The Qibla direction provided by the App is for reference purposes only. While we strive for maximum accuracy using your device's sensors and GPS, we recommend verifying the direction with local religious authorities or mosques for precise orientation during prayer.</p>
-        </section>
-
-        <section>
-            <h2>7. Limitation of Liability</h2>
-            <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL RMDN STUDIOS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, ARISING FROM YOUR USE OF THE APP.</p>
-        </section>
-
-        <section>
-            <h2>8. Privacy</h2>
-            <p>Your use of the App is also governed by our Privacy Policy. Please review our <a href="privacy_policy.html">Privacy Policy</a> to understand how we collect, use, and protect your information.</p>
-        </section>
-
-        <section>
-            <h2>9. Changes to These Terms</h2>
-            <p>We reserve the right to modify these Terms at any time. If we make material changes, we will update the "Last updated" date at the top of this page. Your continued use of the App after any changes constitutes your acceptance of the new Terms.</p>
-        </section>
-
-        <section>
-            <h2>10. Governing Law</h2>
-            <p>These Terms shall be governed by and construed in accordance with the laws applicable in your jurisdiction, without regard to its conflict of law provisions.</p>
-        </section>
-
-        <section>
-            <h2>11. Contact Us</h2>
-            <p>If you have any questions or concerns about these Terms, please contact us at:</p>
-            <p>
-                <strong>RMDN STUDIOS</strong><br>
-                Email: <a href="mailto:support@rmdnstudios.com">support@rmdnstudios.com</a><br>
-                Website: <a href="https://rmdnstudios.com" target="_blank">rmdnstudios.com</a>
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">5. Contact Us</h2>
+            <p class="font-medium">
+                Email: <a href="mailto:support@rmdnstudios.com"
+                    class="text-blue-600 hover:underline">support@rmdnstudios.com</a>
             </p>
-        </section>
-
-        <div class="footer">
-            &copy; 2025 RMDN STUDIOS. All rights reserved.
         </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-8 border-t border-slate-100 text-center text-sm text-slate-400">
+            &copy; 2026 RMDN STUDIOS. All rights reserved.
+        </footer>
+
     </div>
 </body>
+
 </html>

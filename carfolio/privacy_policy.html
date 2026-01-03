@@ -1,119 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Carfolio</title>
+    <!-- Tailwind CSS for consistent styling -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #455a64;
-            margin-top: 20px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .last-updated {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9em;
-            color: #7f8c8d;
-            text-align: center;
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
-    <h1>Privacy Policy</h1>
-    <div class="last-updated">Last updated: December 21, 2025</div>
 
-    <p>This Privacy Policy describes how Carfolio ("we," "us," or "our") collects, uses, and discloses your information when you use our mobile application (the "App").</p>
+<body class="bg-slate-50 text-slate-800">
 
-    <h2>1. Information We Collect</h2>
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200 mb-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="../index.html" class="flex items-center gap-2">
+                    <img src="../assets/logo/transparent_logo_for white_background.png.png" alt="RMDN Studios Logo"
+                        class="h-10 w-auto">
+                </a>
+                <div class="flex items-center gap-6 text-sm font-medium text-slate-600">
+                    <a href="../index.html" class="hover:text-blue-600 transition-colors">Home</a>
+                    <a href="mailto:support@rmdnstudios.com" class="hover:text-blue-600 transition-colors">Support</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <h3>1.1 Information You Provide</h3>
-    <ul>
-        <li><strong>Vehicle Data:</strong> Make, model, year, license plate, VIN, and other vehicle details.</li>
-        <li><strong>Service & Fuel Logs:</strong> Odometer readings, fuel costs, service records, and expenses.</li>
-        <li><strong>Documents & Images:</strong> Photos of receipts, licenses, and other documents you upload.</li>
-    </ul>
+    <div class="max-w-3xl mx-auto px-6 py-12 bg-white min-h-screen shadow-sm">
 
-    <h3>1.2 Automatically Collected Information</h3>
-    <ul>
-        <li><strong>Device Information:</strong> Device model, OS version, and unique device identifiers (for analytics and debugging).</li>
-        <li><strong>Usage Data:</strong> Interactions with the App, crash logs, and performance data.</li>
-        <li><strong>Location Data:</strong> If you grant permission, we may collect your coarse or precise location to help you find nearby fuel stations or log fill-up locations.</li>
-    </ul>
+        <!-- Header -->
+        <header class="border-b border-slate-100 pb-8 mb-8 text-center">
+            <h1 class="text-3xl font-extrabold text-slate-900 mb-2">Privacy Policy</h1>
+            <p class="text-slate-500 mb-4">Carfolio Application</p>
+            <p class="text-sm text-slate-400">Last updated: January 3, 2026</p>
+        </header>
 
-    <h2>2. How We Use Your Information</h2>
-    <p>We use your information to:</p>
-    <ul>
-        <li>Provide and maintain the App's core functionality (tracking vehicles, expenses, and reminders).</li>
-        <li>Sync your data across devices (if Cloud Sync is enabled).</li>
-        <li>Process payments and manage subscriptions (via RevenueCat).</li>
-        <li>Display relevant advertisements (via Google AdMob).</li>
-        <li>Improve the App through analytics.</li>
-    </ul>
+        <!-- Content -->
+        <div class="prose prose-slate max-w-none">
+            <p>This Privacy Policy describes how <strong>RMDN STUDIOS</strong> ("we," "us," or "our") collects, uses,
+                and discloses your information when you use our mobile application, <strong>Carfolio</strong> (the
+                "App").</p>
 
-    <h2>3. Third-Party Services</h2>
-    <p>We share data with the following third-party service providers to facilitate App functionality:</p>
-    <ul>
-        <li><strong>Google Firebase:</strong> Used for authentication, cloud database (Firestore), and secure storage.</li>
-        <li><strong>Google AdMob:</strong> Used to display advertisements. AdMob may collect data to provide personalized ads.</li>
-        <li><strong>RevenueCat:</strong> Used to manage in-app purchases and subscriptions. Transaction data is processed securely; we do not store your credit card information.</li>
-        <li><strong>Google ML Kit:</strong> Used for on-device text recognition (OCR) specifically for scanning receipts and VINs. Processing happens locally on your device.</li>
-    </ul>
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">1. Information We Collect</h2>
 
-    <h2>4. App Permissions</h2>
-    <p>The App may request the following permissions:</p>
-    <ul>
-        <li><strong>Camera / Photo Gallery:</strong> To scan VINs, capture receipts, and upload vehicle photos.</li>
-        <li><strong>Location:</strong> To assist in logging fuel station locations.</li>
-        <li><strong>Biometrics (FaceID/TouchID):</strong> To secure access to the App. Biometric data is processed locally by the operating system and is never stored or transmitted by us.</li>
-    </ul>
+            <h3 class="font-semibold text-slate-800 mt-4 mb-2">1.1 Information You Provide</h3>
+            <ul class="list-disc pl-5 space-y-2 mb-4">
+                <li><strong>Vehicle Data:</strong> Make, model, year, license plate, VIN, and other vehicle details.
+                </li>
+                <li><strong>Logs & Expenses:</strong> Odometer readings, fuel costs, service records, and other
+                    maintenance data.</li>
+                <li><strong>Documents:</strong> Photos of receipts, licenses, and insurance cards you upload.</li>
+            </ul>
 
-    <h2>5. Data Retention & Deletion</h2>
-    <ul>
-        <li><strong>Retention:</strong> We retain your data as long as your account is active.</li>
-        <li><strong>Deletion:</strong> You can delete your account and all associated cloud data at any time via the specific "Delete Account" option in the Settings menu.</li>
-    </ul>
+            <h3 class="font-semibold text-slate-800 mt-4 mb-2">1.2 Automatically Collected Information</h3>
+            <ul class="list-disc pl-5 space-y-2 mb-4">
+                <li><strong>Device Information:</strong> Device model, OS version, and unique identifiers (for
+                    analytics/debugging).</li>
+                <li><strong>Usage Data:</strong> Crash logs, performance metrics, and app interaction data.</li>
+                <li><strong>Location Data:</strong> (Optional) Coarse or precise location to help find fuel stations or
+                    log fill-up locations.</li>
+            </ul>
 
-    <h2>6. Children's Privacy</h2>
-    <p>The App is not intended for use by children under the age of 13. We do not knowingly collect personal information from children.</p>
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">2. How We Use Your Information</h2>
+            <ul class="list-disc pl-5 space-y-2 mb-4">
+                <li>To provide core features (tracking maintenance, calculating fuel efficiency).</li>
+                <li>To sync data across your devices via secure cloud storage.</li>
+                <li>To process subscriptions and payments (via RevenueCat/App Stores).</li>
+                <li>To improve app stability and performance.</li>
+            </ul>
 
-    <h2>7. Affiliate Disclosure</h2>
-    <p>Carfolio participates in the Amazon Services LLC Associates Program. As an Amazon Associate, we earn from qualifying purchases made through affiliate links within the App.</p>
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">3. Third-Party Services</h2>
+            <p class="mb-4">We use trusted third-party providers to support our App:</p>
+            <ul class="list-disc pl-5 space-y-2 mb-4">
+                <li><strong>Google Firebase:</strong> Secure backend for authentication, database (Firestore), and
+                    storage.</li>
+                <li><strong>RevenueCat:</strong> Subscription, purchase validation, and entitlement management.</li>
+                <li><strong>Google AdMob:</strong> Displaying advertisements (if applicable).</li>
+                <li><strong>Google ML Kit:</strong> On-device machine learning for text recognition (VIN/Receipt
+                    scanning).</li>
+            </ul>
 
-    <h2>8. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at:<br>
-    <strong>Email:</strong> support@carfolio.app</p>
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">4. Data Retention & Deletion</h2>
+            <p class="mb-4">We retain data as long as your account is active. You have full control over your data:</p>
+            <ul class="list-disc pl-5 space-y-2 mb-4">
+                <li><strong>Delete Account:</strong> You can permanently delete your account and all cloud data
+                    instantly via the <strong>Settings > Account > Delete Account</strong> option in the App.</li>
+            </ul>
 
-    <div class="footer">
-        &copy; 2025 Carfolio. All rights reserved.
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">5. Children's Privacy</h2>
+            <p class="mb-4">Use of the App is not intended for children under 13. We do not knowingly collect data from
+                children.</p>
+
+            <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">6. Contact Us</h2>
+            <p class="mb-4">For any questions regarding this policy:</p>
+            <p class="font-medium">
+                Email: <a href="mailto:support@rmdnstudios.com"
+                    class="text-blue-600 hover:underline">support@rmdnstudios.com</a>
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-8 border-t border-slate-100 text-center text-sm text-slate-400">
+            &copy; 2026 RMDN STUDIOS. All rights reserved.
+        </footer>
+
     </div>
 </body>
+
 </html>

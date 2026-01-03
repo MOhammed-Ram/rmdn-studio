@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RMDN Studios | Mobile App Developer</title>
-    
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Phosphor Icons for modern iconography -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
@@ -19,18 +20,21 @@
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         /* Subtle gradient animation for Hero */
         .hero-bg {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-bg::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
         }
 
@@ -38,6 +42,7 @@
         .app-card {
             transition: all 0.3s ease;
         }
+
         .app-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -47,11 +52,13 @@
         .modal {
             transition: opacity 0.25s ease;
         }
+
         body.modal-active {
             overflow: hidden;
         }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
     <!-- Navigation -->
@@ -59,15 +66,16 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
-                    <i class="ph-fill ph-rocket-launch text-blue-600 text-2xl"></i>
-                    <span class="font-bold text-xl text-slate-900 tracking-tight">RMDN</span>
+                    <img src="assets/logo/transparent_logo_for white_background.png.png" alt="RMDN Studios Logo"
+                        class="h-10 w-auto">
                 </div>
                 <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
                     <a href="#apps" class="hover:text-blue-600 transition-colors">Our Apps</a>
                     <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
                     <a href="#support" class="hover:text-blue-600 transition-colors">Support</a>
                 </div>
-                <button onclick="document.getElementById('contact-section').scrollIntoView()" class="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
+                <button onclick="document.getElementById('contact-section').scrollIntoView()"
+                    class="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
                     Contact Us
                 </button>
             </div>
@@ -78,14 +86,15 @@
     <section class="hero-bg text-white pt-20 pb-32">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-                Crafting digital experiences<br>that <span class="text-blue-400">simplify life.</span>
+                Useful apps for <span class="text-blue-400">everyday life.</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10">
-                We build intuitive, high-performance mobile applications for iOS and Android. Focused on utility, design, and privacy.
+                We build intuitive, high-quality mobile applications for iOS and Android.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#apps" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all">
-                    View Portfolio
+                <a href="#apps"
+                    class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all">
+                    View Our Apps
                     <i class="ph-bold ph-arrow-down"></i>
                 </a>
             </div>
@@ -94,58 +103,47 @@
 
     <!-- App Showcase Grid -->
     <section id="apps" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 relative z-10 mb-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- App 1: Productivity -->
-            <div class="app-card bg-white rounded-2xl p-6 shadow-lg border border-slate-100 flex flex-col h-full">
-                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
-                    <i class="ph-duotone ph-check-square-offset text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">FocusDo</h3>
-                <p class="text-slate-600 mb-6 flex-grow">A minimal distraction-free task manager designed to help you enter the flow state. Includes Pomodoro timer and cloud sync.</p>
-                <div class="space-y-3 pt-4 border-t border-slate-100">
-                    <a href="#" class="flex items-center justify-center gap-2 w-full bg-slate-900 text-white py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition">
-                        <i class="ph-fill ph-apple-logo"></i> App Store
-                    </a>
-                    <a href="#" class="flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-700 py-2 rounded-lg text-sm font-medium hover:bg-slate-200 transition">
-                        <i class="ph-fill ph-google-play-logo"></i> Google Play
-                    </a>
-                </div>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
-            <!-- App 2: Health -->
-            <div class="app-card bg-white rounded-2xl p-6 shadow-lg border border-slate-100 flex flex-col h-full">
-                <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-green-600">
-                    <i class="ph-duotone ph-heart-beat text-3xl"></i>
+            <!-- App 1: Carfolio -->
+            <!-- App 1: Carfolio -->
+            <a href="carfolio.html"
+                class="app-card bg-white rounded-2xl p-6 shadow-lg border border-slate-100 flex flex-col h-full hover:shadow-xl transition-all block group">
+                <div class="mb-6">
+                    <img src="carfolio/assets/carfolio_icon_light_1024.png" alt="Carfolio Icon"
+                        class="w-20 h-20 rounded-2xl shadow-md group-hover:scale-105 transition-transform">
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">PulseTrack</h3>
-                <p class="text-slate-600 mb-6 flex-grow">Monitor your daily activity and heart rate trends. Integrates seamlessly with wearable devices for real-time analytics.</p>
-                <div class="space-y-3 pt-4 border-t border-slate-100">
-                    <a href="#" class="flex items-center justify-center gap-2 w-full bg-slate-900 text-white py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition">
-                        <i class="ph-fill ph-apple-logo"></i> App Store
-                    </a>
-                    <a href="#" class="flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-700 py-2 rounded-lg text-sm font-medium hover:bg-slate-200 transition">
-                        <i class="ph-fill ph-google-play-logo"></i> Google Play
-                    </a>
+                <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Carfolio
+                </h3>
+                <p class="text-slate-600 mb-6 flex-grow">The ultimate car management app. Track fuel consumption,
+                    expenses, and maintenance logs in one place.</p>
+                <div class="pt-4 border-t border-slate-100">
+                    <span
+                        class="flex items-center justify-center gap-2 w-full bg-slate-50 text-blue-600 py-2 rounded-lg text-sm font-medium group-hover:bg-blue-50 transition">
+                        View Details <i class="ph-bold ph-arrow-right"></i>
+                    </span>
                 </div>
-            </div>
+            </a>
 
-            <!-- App 3: Utility -->
-            <div class="app-card bg-white rounded-2xl p-6 shadow-lg border border-slate-100 flex flex-col h-full">
-                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-purple-600">
-                    <i class="ph-duotone ph-currency-circle-dollar text-3xl"></i>
+            <!-- App 2: Qibla Finder -->
+            <!-- App 2: Qibla Finder -->
+            <a href="qibla-finder.html"
+                class="app-card bg-white rounded-2xl p-6 shadow-lg border border-slate-100 flex flex-col h-full hover:shadow-xl transition-all block group">
+                <div class="mb-6">
+                    <img src="qibla-finder/assets/app_icon.png" alt="Qibla Finder Icon"
+                        class="w-20 h-20 rounded-2xl shadow-md group-hover:scale-105 transition-transform">
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">SplitEasy</h3>
-                <p class="text-slate-600 mb-6 flex-grow">The easiest way to split bills with friends. No account required, works offline, and supports multiple currencies.</p>
-                <div class="space-y-3 pt-4 border-t border-slate-100">
-                    <button class="flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-400 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
-                        <i class="ph-fill ph-apple-logo"></i> Coming Soon
-                    </button>
-                    <a href="#" class="flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-700 py-2 rounded-lg text-sm font-medium hover:bg-slate-200 transition">
-                        <i class="ph-fill ph-google-play-logo"></i> Google Play
-                    </a>
+                <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">Qibla
+                    Finder to Mecca</h3>
+                <p class="text-slate-600 mb-6 flex-grow">Accurate prayer times and Qibla direction, anywhere in the
+                    world. Includes Adhkar and Islamic calendar.</p>
+                <div class="pt-4 border-t border-slate-100">
+                    <span
+                        class="flex items-center justify-center gap-2 w-full bg-slate-50 text-emerald-600 py-2 rounded-lg text-sm font-medium group-hover:bg-emerald-50 transition">
+                        View Details <i class="ph-bold ph-arrow-right"></i>
+                    </span>
                 </div>
-            </div>
+            </a>
 
         </div>
     </section>
@@ -154,8 +152,9 @@
     <section id="about" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-slate-900 mb-4">Built for Users, Not Ad-Networks</h2>
-            <p class="text-slate-600 text-lg mb-12">We believe in software that respects your privacy. Our business model is simple: we build great tools, and you buy them. No hidden tracking.</p>
-            
+            <p class="text-slate-600 text-lg mb-12">We believe in software that respects your privacy. Our business
+                model is simple: we build great tools, and you buy them. No hidden tracking.</p>
+
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                     <div class="text-4xl font-extrabold text-blue-600 mb-1">50k+</div>
@@ -166,7 +165,7 @@
                     <div class="text-sm text-slate-500 font-medium uppercase tracking-wide">Avg Rating</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-extrabold text-blue-600 mb-1">3</div>
+                    <div class="text-4xl font-extrabold text-blue-600 mb-1">2</div>
                     <div class="text-sm text-slate-500 font-medium uppercase tracking-wide">Published Apps</div>
                 </div>
                 <div>
@@ -177,50 +176,111 @@
         </div>
     </section>
 
+    <!-- Beta Tester Section -->
+    <section id="beta-tester" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Become a Beta Tester</h2>
+            <p class="text-slate-600 text-lg mb-12">Get early access to our latest features and help shape the future of
+                our apps.</p>
+
+            <form class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-left"
+                action="mailto:support@rmdnstudios.com" method="post" enctype="text/plain">
+                <div class="mb-6">
+                    <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                </div>
+
+                <div class="mb-6">
+                    <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label for="app" class="block text-sm font-medium text-slate-700 mb-2">Preferred App</label>
+                        <select id="app" name="app"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition bg-white">
+                            <option value="both">Both Apps</option>
+                            <option value="carfolio">Carfolio</option>
+                            <option value="qibla">Qibla Finder</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="platform" class="block text-sm font-medium text-slate-700 mb-2">Platform</label>
+                        <select id="platform" name="platform"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition bg-white">
+                            <option value="ios">iOS (TestFlight)</option>
+                            <option value="android">Android</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-colors shadow-lg shadow-blue-600/20">
+                    Apply for Early Access
+                </button>
+            </form>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-12 mt-auto" id="contact-section">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
             <div class="col-span-1 md:col-span-2">
                 <div class="flex items-center gap-2 mb-4 text-white">
-                    <i class="ph-fill ph-rocket-launch text-2xl"></i>
-                    <span class="font-bold text-xl">RMDN Studios</span>
+                    <img src="assets/logo/transparent_logo_for black_background.png" alt="RMDN Studios Logo"
+                        class="h-10 w-auto">
                 </div>
                 <p class="text-sm leading-relaxed max-w-xs mb-6">
-                    Building the next generation of mobile productivity tools. Based in San Francisco, accessible worldwide.
+                    Building the next generation of mobile productivity tools. Based in San Francisco, accessible
+                    worldwide.
                 </p>
                 <div class="flex gap-4">
-                    <a href="#" class="text-slate-400 hover:text-white transition"><i class="ph-fill ph-twitter-logo text-xl"></i></a>
-                    <a href="#" class="text-slate-400 hover:text-white transition"><i class="ph-fill ph-github-logo text-xl"></i></a>
-                    <a href="#" class="text-slate-400 hover:text-white transition"><i class="ph-fill ph-linkedin-logo text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i
+                            class="ph-fill ph-twitter-logo text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i
+                            class="ph-fill ph-github-logo text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i
+                            class="ph-fill ph-linkedin-logo text-xl"></i></a>
                 </div>
             </div>
-            
+
             <div>
                 <h4 class="text-white font-semibold mb-4">Contact</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="mailto:support@rmdnstudios.com" class="hover:text-blue-400 transition">support@rmdnstudios.com</a></li>
-                    <li><a href="mailto:press@rmdnstudios.com" class="hover:text-blue-400 transition">press@rmdnstudios.com</a></li>
+                    <li><a href="mailto:support@rmdnstudios.com"
+                            class="hover:text-blue-400 transition">support@rmdnstudios.com</a></li>
+                    <li><a href="mailto:press@rmdnstudios.com"
+                            class="hover:text-blue-400 transition">press@rmdnstudios.com</a></li>
                 </ul>
             </div>
 
             <div>
                 <h4 class="text-white font-semibold mb-4">Legal</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><button onclick="toggleModal('privacy-modal')" class="hover:text-blue-400 transition text-left">Privacy Policy</button></li>
-                    <li><button onclick="toggleModal('terms-modal')" class="hover:text-blue-400 transition text-left">Terms of Service</button></li>
+                    <li><button onclick="toggleModal('privacy-modal')"
+                            class="hover:text-blue-400 transition text-left">Privacy Policy</button></li>
+                    <li><button onclick="toggleModal('terms-modal')"
+                            class="hover:text-blue-400 transition text-left">Terms of Service</button></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm text-center md:text-left">
-            &copy; 2025 RMDN Studios. All rights reserved.
+        <div
+            class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm text-center md:text-left">
+            &copy; 2026 RMDN Studios. All rights reserved.
         </div>
     </footer>
 
     <!-- Privacy Policy Modal (Required for App Stores) -->
-    <div id="privacy-modal" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
-        <div class="modal-overlay absolute w-full h-full bg-black opacity-50" onclick="toggleModal('privacy-modal')"></div>
-        
-        <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-2xl z-50 overflow-y-auto max-h-[90vh]">
+    <div id="privacy-modal"
+        class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
+        <div class="modal-overlay absolute w-full h-full bg-black opacity-50" onclick="toggleModal('privacy-modal')">
+        </div>
+
+        <div
+            class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-2xl z-50 overflow-y-auto max-h-[90vh]">
             <!-- Header -->
             <div class="flex justify-between items-center py-4 px-6 border-b border-slate-100">
                 <p class="text-lg font-bold text-slate-900">Privacy Policy</p>
@@ -228,45 +288,55 @@
                     <i class="ph-bold ph-x text-xl"></i>
                 </button>
             </div>
-            
+
             <!-- Content -->
             <div class="px-6 py-6 text-slate-600 text-sm leading-relaxed space-y-4">
-                <p><strong>Last updated: January 2025</strong></p>
-                <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
-                
+                <p><strong>Last updated: January 2026</strong></p>
+                <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of
+                    Your information when You use the Service and tells You about Your privacy rights and how the law
+                    protects You.</p>
+
                 <h3 class="font-bold text-slate-800 text-base mt-4">Interpretation and Definitions</h3>
-                <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
-                
+                <p>The words of which the initial letter is capitalized have meanings defined under the following
+                    conditions. The following definitions shall have the same meaning regardless of whether they appear
+                    in singular or in plural.</p>
+
                 <h3 class="font-bold text-slate-800 text-base mt-4">Collecting and Using Your Personal Data</h3>
-                <p>We do not collect any personally identifiable information from our users. Our apps are designed to function locally on your device.</p>
-                
+                <p>We do not collect any personally identifiable information from our users. Our apps are designed to
+                    function locally on your device.</p>
+
                 <h3 class="font-bold text-slate-800 text-base mt-4">Crash Data</h3>
-                <p>In the event of an error, we may collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
+                <p>In the event of an error, we may collect data and information (through third-party products) on your
+                    phone called Log Data. This Log Data may include information such as your device Internet Protocol
+                    ("IP") address, device name, operating system version, the configuration of the app when utilizing
+                    our Service, the time and date of your use of the Service, and other statistics.</p>
 
                 <h3 class="font-bold text-slate-800 text-base mt-4">Contact Us</h3>
-                <p>If you have any questions about this Privacy Policy, You can contact us by email: support@rmdnstudios.com</p>
+                <p>If you have any questions about this Privacy Policy, You can contact us by email:
+                    support@rmdnstudios.com</p>
             </div>
 
             <!-- Footer -->
             <div class="flex justify-end pt-4 px-6 pb-6 bg-slate-50 rounded-b-xl">
-                <button onclick="toggleModal('privacy-modal')" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Close</button>
+                <button onclick="toggleModal('privacy-modal')"
+                    class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Close</button>
             </div>
         </div>
     </div>
 
     <!-- JavaScript for Modals -->
     <script>
-        function toggleModal(modalID){
+        function toggleModal(modalID) {
             const modal = document.getElementById(modalID);
             if (!modal) return;
-            
+
             modal.classList.toggle('opacity-0');
             modal.classList.toggle('pointer-events-none');
             document.body.classList.toggle('modal-active');
         }
 
         // Close modal when pressing Escape key
-        document.onkeydown = function(evt) {
+        document.onkeydown = function (evt) {
             evt = evt || window.event;
             var isEscape = false;
             if ("key" in evt) {
@@ -277,11 +347,12 @@
             if (isEscape && document.body.classList.contains('modal-active')) {
                 // Ideally track which modal is open, for now just close privacy
                 const modal = document.getElementById('privacy-modal');
-                if(!modal.classList.contains('opacity-0')) {
+                if (!modal.classList.contains('opacity-0')) {
                     toggleModal('privacy-modal');
                 }
             }
         };
     </script>
 </body>
+
 </html>
