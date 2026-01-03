@@ -215,15 +215,12 @@
             </div>
 
             <form id="beta-form"
-                class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-left"
-                action="https://formsubmit.co/support@rmdnstudios.com" method="POST">
+                class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-left">
 
-                <!-- FormSubmit Configuration -->
+                <!-- FormSubmit Configuration (AJAX) -->
                 <input type="hidden" name="_subject" value="New Beta Tester Application!">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
-                <!-- Redirect back to the same page with a success flag -->
-                <input type="hidden" name="_next" value="https://rmdnstudios.com/index.html?success=true">
 
                 <div class="mb-6">
                     <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
@@ -257,7 +254,7 @@
                     </div>
                 </div>
 
-                <button type="submit"
+                <button type="submit" id="submit-btn"
                     class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-colors shadow-lg shadow-blue-600/20">
                     Apply for Early Access
                 </button>
@@ -265,16 +262,49 @@
         </div>
     </section>
 
-    <!-- Simple script to handle success message on page load -->
+    <!-- AJAX Form Handler -->
     <script>
+        const betaForm = document.getElementById('beta-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        betaForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = "Sending...";
+
+            const formData = new FormData(betaForm);
+
+            fetch("https://formsubmit.co/ajax/support@rmdnstudios.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(Object.fromEntries(formData))
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Success: Hide form, show success message
+                    betaForm.classList.add('hidden');
+                    document.getElementById('beta-success').classList.remove('hidden');
+                    document.getElementById('beta-success').scrollIntoView({ behavior: 'smooth' });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Something went wrong. Please try again later.');
+                    // Reset button
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = originalText;
+                });
+        });
+
+        // Keep this for legacy support (if user comes from a redirect somehow)
         if (window.location.search.includes('success=true')) {
-            document.getElementById('beta-form').classList.add('hidden');
+            betaForm.classList.add('hidden');
             document.getElementById('beta-success').classList.remove('hidden');
-            // Check for the section and scroll to it if it exists
-            const betaSection = document.getElementById('beta-tester');
-            if (betaSection) {
-                betaSection.scrollIntoView({ behavior: 'smooth' });
-            }
         }
     </script>
 
