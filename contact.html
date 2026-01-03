@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RMDN Studios</title>
+    <meta name="description"
+        content="Get in touch with RMDN Studios. We're here to help with any questions about our apps or general inquiries.">
+
+    <!-- Tailwind CSS (Local Build) -->
+    <link href="./dist/output.css" rel="stylesheet">
+
+    <!-- Phosphor Icons for modern iconography -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Subtle gradient animation for Hero */
+        .hero-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <a href="index.html">
+                        <img src="assets/logo/transparent_logo_for white_background.png.png" alt="RMDN Studios Logo"
+                            class="h-10 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                    <a href="index.html#apps" class="hover:text-blue-600 transition-colors">Our Apps</a>
+                    <a href="index.html#about" class="hover:text-blue-600 transition-colors">About</a>
+                    <a href="contact.html" class="text-blue-600 font-semibold transition-colors">Support</a>
+                </div>
+                <a href="contact.html"
+                    class="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6">
+                Get in Touch
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
+                Have a question or feedback? We'd love to hear from you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 -mt-20 relative z-10 mb-12">
+        <div class="max-w-2xl mx-auto px-4">
+
+            <!-- Success Message (Shown via URL query param) -->
+            <div id="contact-success"
+                class="hidden bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center shadow-lg mb-8">
+                <i class="ph-fill ph-check-circle text-4xl text-emerald-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Message Sent!</h3>
+                <p class="text-slate-600">Thanks for reaching out. We'll get back to you as soon as possible.</p>
+                <a href="contact.html"
+                    class="inline-block mt-6 text-emerald-600 font-medium hover:text-emerald-700">Send another
+                    message</a>
+            </div>
+
+            <form id="contact-form" class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-slate-100"
+                action="https://formsubmit.co/support@rmdnstudios.com" method="POST">
+
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Contact Inquiry">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <!-- Redirect back to the same page with a success flag -->
+                <input type="hidden" name="_next" value="https://rmdnstudios.com/contact.html?success=true">
+
+                <div class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-slate-700 mb-2">Subject</label>
+                        <select id="subject" name="subject"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition bg-white">
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Bug Report">Bug Report</option>
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="Business">Business / Partnership</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                        <textarea id="message" name="message" required rows="5" placeholder="How can we help you?"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-colors shadow-lg shadow-blue-600/20 flex items-center justify-center gap-2">
+                        Send Message <i class="ph-bold ph-paper-plane-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Simple script to handle success message on page load -->
+    <script>
+        if (window.location.search.includes('success=true')) {
+            document.getElementById('contact-form').classList.add('hidden');
+            document.getElementById('contact-success').classList.remove('hidden');
+            document.getElementById('contact-success').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-4 text-white">
+                    <img src="assets/logo/transparent_logo_for black_background.png" alt="RMDN Studios Logo"
+                        class="h-10 w-auto">
+                </div>
+                <p class="text-sm leading-relaxed max-w-xs mb-6">
+                    Building the next generation of mobile productivity tools. Based in Antalya/Türkiye, accessible
+                    worldwide.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i
+                            class="ph-fill ph-twitter-logo text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i
+                            class="ph-fill ph-github-logo text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition"><i
+                            class="ph-fill ph-linkedin-logo text-xl"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="mailto:support@rmdnstudios.com"
+                            class="hover:text-blue-400 transition">support@rmdnstudios.com</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4">Legal</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="carfolio/privacy_policy.html" class="hover:text-blue-400 transition">Privacy Policy</a>
+                    </li>
+                    <li><a href="carfolio/terms_of_use.html" class="hover:text-blue-400 transition">Terms of Service</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm text-center md:text-left">
+            &copy; 2026 RMDN Studios. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>
